@@ -92,7 +92,7 @@ function Landing({ setSelectedPage }) {
             <a
               href="../../assets/resume.pdf"
               download
-              className="flex justify-center items-center gap-2"
+              className="w-full flex justify-center  md:flex md:justify-center md:items-center gap-2"
             >
               Resume{" "}
               <span className="text-black text-center pt-1">

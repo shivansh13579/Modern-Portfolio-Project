@@ -65,7 +65,7 @@ function Navbar({ isTopOfPage, selectedPage, setSelectedPage }) {
 
         {/* MOBILE MENU POPUP */}
         {!isAboveSmallScreens && isMenuToggled && (
-          <div className="absolute right-0 left-0 top-20 bg-slate-400  h-[465px] shadow-sm shadow-zinc-500 rounded-lg w-full">
+          <div className="absolute right-0 left-0 top-20 bg-slate-400  h-[480px] shadow-sm shadow-zinc-500 rounded-lg w-full">
             <div className=" ">
               {/* CLOSE ICON  */}
               <div className="flex justify-end p-4">
