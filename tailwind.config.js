@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const flattenColorPalette =
+  require("tailwindcss/lib/util/flattenColorPalette").default;
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   mode: "jit",
@@ -19,6 +21,11 @@ export default {
 
         "gradient-rainblue":
           "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
+        hero: "url('../assets/pp.jpg')",
+        blac: "url('../assets/bl.jpg')",
+        kit: "url('../assets/kt.jpg')",
+        lig: "url('../assets/lg.jpg')",
+        mit: "url('../assets/mt.jpg')",
       }),
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
@@ -40,9 +47,12 @@ export default {
       },
       boxShadow: {
         "right-bottom": "8px 8px 0 rgba(0, 0, 0, 0.5)",
+        input: `0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08)`,
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
         meteor: {
@@ -53,8 +63,24 @@ export default {
             opacity: "0",
           },
         },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
 };
+
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

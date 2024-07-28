@@ -7,7 +7,6 @@ import Landing from "./scenes/Landing";
 import LineGradient from "./components/LineGradient";
 import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
-import Testimonials from "./scenes/Testimonials";
 import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
 
@@ -26,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <div className="app bg-deep-blue">
+    <div className="app">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -46,21 +45,15 @@ function App() {
         <MySkills />
       </div>
       <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto md:h-fit">
         <Projects />
       </div>
 
-      {/* <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full">
-        <Testimonials />
-      </div> */}
-
-      {/* <LineGradient />
-      <div className="w-5/6 mx-auto md:h-full">
+      <LineGradient />
+      <div className="w-5/6 mx-auto md:h-fit">
         <Contact />
-      </div> */}
-
-      {/* <Footer /> */}
+      </div>
+      <Footer />
     </div>
   );
 }
