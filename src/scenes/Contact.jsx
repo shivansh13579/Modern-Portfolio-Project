@@ -1,11 +1,18 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
 import { Button } from "../components/ui/moving-border";
-import { useRef } from "react";
+import { useState } from "react";
 import emailJs from "emailjs-com";
 
 const Contact = () => {
-  const form = useRef();
+  const data = { name: "", email: "", message: "" };
+  const [input, setInput] = useState(data);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setInput({ ...input, [name]: value });
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -14,7 +21,7 @@ const Contact = () => {
       .sendForm(
         "service_4p6n1py",
         "template_jcs7izh",
-        form.current,
+        input,
         "LcZbdn0C7NPwluf7K"
       )
       .then(
@@ -27,7 +34,7 @@ const Contact = () => {
       );
 
     // Reset form fields
-    e.target.reset();
+    setInput("");
   };
 
   return (
@@ -81,7 +88,7 @@ const Contact = () => {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <form ref={form} onSubmit={sendEmail}>
+          <form onSubmit={sendEmail}>
             <div className="">
               <Button
                 borderRadius="1.5rem"
@@ -92,6 +99,8 @@ const Contact = () => {
                   type="text"
                   name="name"
                   placeholder="Name"
+                  value={input.name}
+                  onChange={handleChange}
                 />
               </Button>
             </div>
@@ -106,6 +115,8 @@ const Contact = () => {
                   type="email"
                   name="email"
                   placeholder="Email"
+                  value={input.email}
+                  onChange={handleChange}
                 />
               </Button>
             </div>
@@ -119,6 +130,9 @@ const Contact = () => {
                   className="w-full outline-none font-playfair hover:bg-zinc-950 placeholder-white bg-slate-900 text-[18px] rounded-xl px-4 py-5 sm:py-9"
                   name="message"
                   placeholder="Message"
+                  value={input.message}
+                  onChange={handleChange}
+                  type="text"
                 />
               </Button>
             </div>
@@ -138,8 +152,6 @@ const Contact = () => {
         </motion.div>
       </div>
     </section>
-
-    // lkhkgj
   );
 };
 

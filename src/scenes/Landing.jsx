@@ -31,7 +31,7 @@ function Landing({ setSelectedPage }) {
           >
             <img
               className="hover:filter hover:saturate-150 rounded-t-[400px] transition duration-500 z-10 w-full max-w-[400px] md:max-w-[350px]"
-              src="../../assets/rk.jpg"
+              src="../../assets/MyResume.pdf"
               alt="profile"
             />
           </div>
