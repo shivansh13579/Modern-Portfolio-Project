@@ -48,7 +48,9 @@ function Projects() {
                     whileInView={{ opacity: 1 }}
                   >
                     <Link
-                      to={"https://github.com/shivansh13579/ReactBlog-Project"}
+                      to={
+                        "https://pandit-jajkq08tn-shivansh13579s-projects.vercel.app/"
+                      }
                     >
                       <img
                         className="w-full h-[320px] rounded-[22px]"
@@ -60,12 +62,11 @@ function Projects() {
                 </div>
                 <div className="flex-1 flex flex-col items-start pl-10 w-full">
                   <p className="dark:text-neutral-200 font-bold sm:text-3xl md:text-5xl  text-black text-3xl">
-                    React Blog Project
+                    Ecommerce-Project
                   </p>
                   <p className="text-xl font-semibold pt-4 text-neutral-600 dark:text-neutral-400">
-                    Blog Project making to use ReactJs framwork and I use
-                    appwrite service as for backend also used many npm like as
-                    redux ,redux-toolkit and react-hook-form.
+                    This Project have made by ReactJs and appwrite server is use
+                    for backend.I use Redux-toolkit to maintainable state.
                   </p>
                   <div className="flex items-center gap-6 pt-6">
                     <FaGithub className="bg-black rounded-full text-5xl" />
@@ -245,13 +246,11 @@ function Projects() {
                   </div>
                   <div className="basis-2/3 flex flex-col items-start w-full py-2">
                     <p className="dark:text-neutral-200 font-bold sm:text-xl md:text-2xl  text-black">
-                      Portfolio Project
+                      Ecommerce-Project
                     </p>
                     <p className="text-[14px] font-semibold pt-1 text-black dark:text-neutral-400">
-                      Portfolio Project is my first project that is hosted by
-                      github.I made this project by using react and also use
-                      framer motion for animation.I learn too much to make this
-                      project.
+                      This Project have made by ReactJs and appwrite server is
+                      use for backend.I use Redux-toolkit to maintainable state.
                     </p>
                     <div className="flex justify-start gap-5 items-center w-full pt-2">
                       <div className="">
