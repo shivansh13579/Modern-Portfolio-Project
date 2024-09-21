@@ -31,7 +31,7 @@ function Landing({ setSelectedPage }) {
           >
             <img
               className="hover:filter hover:saturate-150 rounded-t-[400px] transition duration-500 z-10 w-full max-w-[400px] md:max-w-[350px]"
-              src="../../assets/MyResume.pdf"
+              src="../../assets/rk.jpg"
               alt="profile"
             />
           </div>
@@ -90,7 +90,7 @@ function Landing({ setSelectedPage }) {
         >
           <p className="flex w-1/2 md:w-1/3  text-xl bg-gradient-rainblue text-deep-blue rounded-[10px] py-2 px-4 xs:py-3 xs:px-7 font-semibold hover:bg-blue hover:text-white transition duration-500">
             <a
-              href="../../assets/resume.pdf"
+              href="../../assets/MyResume.pdf"
               download
               className="w-full flex justify-center  md:flex md:justify-center md:items-center gap-2"
             >
